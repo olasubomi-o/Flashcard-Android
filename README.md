@@ -1,4 +1,4 @@
-![lab1](https://user-images.githubusercontent.com/67253470/109372644-40935600-7870-11eb-868c-feedb194127a.gif)
+
 # Flashcard-Android
 ## Olasubomi's Flashcard
 
@@ -11,9 +11,7 @@
 ### App Walk-though
 `TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
-<img src="(https://user-images.githubusercontent.com/67253470/109372626-193c8900-7870-11eb-9015-54ed3681c7e7.gif)
-" width=200><br>
-
+![lab1](https://user-images.githubusercontent.com/67253470/109372644-40935600-7870-11eb-868c-feedb194127a.gif)
 
 
 ## Required
