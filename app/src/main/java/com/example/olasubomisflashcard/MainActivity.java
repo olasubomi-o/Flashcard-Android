@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         TextView flashcardAnswer_1 = findViewById(R.id.answer_1);
         TextView flashcardAnswer_2 = findViewById(R.id.answer_2);
         TextView flashcardAnswer_3 = findViewById(R.id.answer_3);
+        TextView flashcard_answer = findViewById(R.id.flashcard_answer);
         ImageView no_eye= findViewById(R.id.toggle_visibility_no);
         ImageView eye= findViewById(R.id.toggle_visibility);
         flashcardAnswer_3.setOnClickListener(new View.OnClickListener() {
@@ -74,4 +75,24 @@ public class MainActivity extends AppCompatActivity {
                 flashcardAnswer_3.setVisibility(View.INVISIBLE);
             }
         });
-}}
+
+            flashcardQuestion.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    flashcardQuestion.setVisibility(View.INVISIBLE);
+                    flashcard_answer.setVisibility(View.VISIBLE);
+                }
+
+            });
+            flashcard_answer.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    flashcardQuestion.setVisibility(View.VISIBLE);
+                    flashcard_answer.setVisibility(View.INVISIBLE);
+                }
+
+            });
+
+
+        }
+    }
