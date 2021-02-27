@@ -9,7 +9,6 @@
 `TODO://` Flashcard app that shows a question and answer option.Have the ability to hide the answer option with the toggle button
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
 ![lab1](https://user-images.githubusercontent.com/67253470/109372644-40935600-7870-11eb-868c-feedb194127a.gif)
 
