@@ -1,3 +1,4 @@
+![lab1](https://user-images.githubusercontent.com/67253470/109372644-40935600-7870-11eb-868c-feedb194127a.gif)
 # Flashcard-Android
 ## Olasubomi's Flashcard
 
