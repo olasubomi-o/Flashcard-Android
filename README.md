@@ -10,7 +10,9 @@
 
 ### App Walk-though
 
-![lab1](https://user-images.githubusercontent.com/67253470/109372644-40935600-7870-11eb-868c-feedb194127a.gif)
+
+![lab1update](https://user-images.githubusercontent.com/67253470/109397404-feaff180-78fb-11eb-9795-b820412503da.gif)
+
 
 
 ## Required
