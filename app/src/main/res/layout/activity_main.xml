@@ -106,5 +106,15 @@
         android:visibility="visible"
         />
 
+    <ImageView
+        android:id="@+id/add_icon"
+        android:layout_width="65dp"
+        android:layout_height="259dp"
+        android:src="@drawable/add_icon"
+        android:layout_marginTop="650dp"
+        android:visibility="visible"
+        android:layout_marginLeft="320dp"/>
+
+
 
 </RelativeLayout>

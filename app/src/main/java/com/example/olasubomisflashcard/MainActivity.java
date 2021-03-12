@@ -1,7 +1,10 @@
 package com.example.olasubomisflashcard;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -19,8 +22,10 @@ public class MainActivity extends AppCompatActivity {
         TextView flashcardAnswer_2 = findViewById(R.id.answer_2);
         TextView flashcardAnswer_3 = findViewById(R.id.answer_3);
         TextView flashcard_answer = findViewById(R.id.flashcard_answer);
-        ImageView no_eye= findViewById(R.id.toggle_visibility_no);
-        ImageView eye= findViewById(R.id.toggle_visibility);
+        ImageView no_eye = findViewById(R.id.toggle_visibility_no);
+        ImageView eye = findViewById(R.id.toggle_visibility);
+        ImageView add_icon = findViewById(R.id.add_icon);
+
         flashcardAnswer_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,9 +53,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
-
         });
-        eye.setOnClickListener(new View.OnClickListener(){
+        eye.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -62,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 flashcardAnswer_3.setVisibility(View.VISIBLE);
             }
         });
-        no_eye.setOnClickListener(new View.OnClickListener(){
+        no_eye.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -76,23 +80,51 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-            flashcardQuestion.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    flashcardQuestion.setVisibility(View.INVISIBLE);
-                    flashcard_answer.setVisibility(View.VISIBLE);
-                }
+        flashcardQuestion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                flashcardQuestion.setVisibility(View.INVISIBLE);
+                flashcard_answer.setVisibility(View.VISIBLE);
+            }
 
-            });
-            flashcard_answer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    flashcardQuestion.setVisibility(View.VISIBLE);
-                    flashcard_answer.setVisibility(View.INVISIBLE);
-                }
+        });
+        flashcard_answer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                flashcardQuestion.setVisibility(View.VISIBLE);
+                flashcard_answer.setVisibility(View.INVISIBLE);
+            }
 
-            });
+        });
+
+        onCreate();
+
+    }
+
+    private void onCreate() {
+        ImageView add_icon = findViewById(R.id.add_icon);
+        add_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
+                MainActivity.this.startActivityForResult(intent,100);
+                add_icon.setVisibility(View.INVISIBLE);
+
+            }
+        });
 
 
+}
+
+    @SuppressLint("MissingSuperCall")
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 100) {
+            String string1 = data.getExtras().getString("string1");
+            String string2 = data.getExtras().getString("string2");
         }
     }
+}
+
+
+
