@@ -4,23 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="15dp"
+    >
 
     <TextView
         android:id="@+id/flashcard_question"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="200dp"
         android:textSize="40sp"
         android:text="Who is the 44th President of The United States of America?"
         android:gravity = "center"
         android:background="@drawable/question_background"
         android:elevation="5dp"
+        android:layout_centerHorizontal="true"
         />
 
     <TextView
         android:id="@+id/answer_1"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="80dp"
         android:layout_alignParentEnd="true"
 
         android:layout_alignParentRight="true"
@@ -38,14 +41,14 @@
     <TextView
         android:id="@+id/answer_2"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="80dp"
         android:layout_alignBottom="@id/answer_1"
 
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="149dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="95dp"
         android:background="@drawable/answer_background"
         android:gravity="center"
         android:text="Donald Trump"
@@ -55,14 +58,14 @@
     <TextView
         android:id="@+id/answer_3"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="80dp"
 
         android:layout_alignTop="@+id/answer_2"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="-139dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
+        android:layout_marginTop="-95dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
         android:background="@drawable/answer_background"
         android:gravity="center"
         android:text="Barrack Obama"
@@ -71,18 +74,20 @@
 
     <TextView
         android:id="@+id/flashcard_answer"
-        android:layout_width="match_parent"
-        android:layout_height="210dp"
-        android:layout_alignParentEnd="true"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
 
-        android:layout_alignParentRight="true"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
         android:background="#CDDC39"
         android:gravity="center"
         android:text="Barrack Obama"
         android:textSize="40sp"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        />
+
+
 
     <ImageView
         android:layout_width="40dp"
@@ -108,12 +113,13 @@
 
     <ImageView
         android:id="@+id/add_icon"
-        android:layout_width="65dp"
-        android:layout_height="259dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:src="@drawable/add_icon"
-        android:layout_marginTop="650dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:visibility="visible"
-        android:layout_marginLeft="320dp"/>
+        android:layout_alignParentRight="true" />
 
 
 

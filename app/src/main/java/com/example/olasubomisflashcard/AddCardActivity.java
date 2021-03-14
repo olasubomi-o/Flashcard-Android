@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -21,19 +22,21 @@ public class AddCardActivity extends AppCompatActivity {
         cancel_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AddCardActivity.this, MainActivity.class);
-                startActivity(intent);
+                finish();
 
             }
         });
 
-        save_icon.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.save_icon).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((EditText) findViewById(R.id.input_question)).getText().toString();
+                Log.d("OnClickListener", "Saved");
+                String input_question = ((EditText) findViewById(R.id.input_question)).getText().toString();
+                String input_answer = ((EditText) findViewById(R.id.input_answer)).getText().toString();
+                Log.d(input_question.toString(), input_answer.toString());
                 Intent data = new Intent();
-                data.putExtra("string1","some string");
-                data.putExtra("string2", "another string");
+                data.putExtra("question",input_question);
+                data.putExtra("answer",input_answer);
                 setResult(RESULT_OK,data);
                 finish();
 
