@@ -36,12 +36,7 @@
 `TODO://` Flashcard app that enables card creation
 
 ### App Walk-though
-`TODO://`
-
-![Screen Recording 2021-03-12 at 10 37 02 PM](https://user-images.githubusercontent.com/67253470/111056728-02d52680-8447-11eb-95d5-3d9ea5e5e769.gif)
-
-
-es.githubusercontent.com/67253470/109397404-feaff180-78fb-11eb-9795-b820412503da.gif)
+`TODO://`![Screen Recording 2021-03-15 at 9 41 49 AM](https://user-images.githubusercontent.com/67253470/111172049-7c6a3300-8573-11eb-887f-c4111edc13de.gif)
 
 
 `TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
