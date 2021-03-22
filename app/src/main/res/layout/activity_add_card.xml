@@ -12,7 +12,7 @@
         android:layout_height="259dp"
         android:layout_marginStart="320dp"
         android:layout_marginLeft="320dp"
-        android:layout_marginTop="620dp"
+        android:layout_marginTop="300dp"
         android:src="@drawable/cancel_icon"
         android:visibility="visible" />
 
@@ -35,14 +35,16 @@
         android:layout_marginBottom="-116dp"
         android:hint="Enter your answer here"
         android:inputType="textMultiLine" />
+
     <ImageView
         android:id="@+id/save_icon"
         android:layout_width="75dp"
         android:layout_height="259dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="620dp"
+        android:layout_marginTop="300dp"
         android:src="@drawable/save_icon"
         android:visibility="visible" />
+
 </RelativeLayout>
 

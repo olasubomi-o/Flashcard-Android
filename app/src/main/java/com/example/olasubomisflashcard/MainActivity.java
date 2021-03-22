@@ -11,13 +11,28 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
+
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+
+    FlashcardDatabase flashcardDatabase;
+    List <Flashcard> allFlashcards;
+    int currentCardDisplayedIndex = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        flashcardDatabase = new FlashcardDatabase(this);
+        allFlashcards = flashcardDatabase.getAllCards();
+
+        if (allFlashcards != null && allFlashcards.size() > 0) {
+            ((TextView) findViewById(R.id.flashcard_question)).setText(allFlashcards.get(0).getQuestion());
+            ((TextView) findViewById(R.id.flashcard_answer)).setText(allFlashcards.get(0).getAnswer());
+        }
 
 
         TextView flashcardQuestion = findViewById(R.id.flashcard_question);
@@ -109,6 +124,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.next_arrow).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(allFlashcards.size()==0)
+                    return;
+                currentCardDisplayedIndex++;
+
+                Log.i("click", "Next slide");
+                //Implement snackbar
+
+                Flashcard flashcard = allFlashcards.get(currentCardDisplayedIndex);
+           ((TextView) findViewById(R.id.flashcard_question)).setText(flashcard.getQuestion());
+              ((TextView) findViewById(R.id.flashcard_answer)).setText(flashcard.getAnswer());
+
+            }
+
+        });
+
 
     }
 
@@ -124,6 +158,8 @@ public class MainActivity extends AppCompatActivity {
             Log.d(question, answer);
             ((TextView) findViewById(R.id.flashcard_question)).setText(question);
             ((TextView) findViewById(R.id.flashcard_answer)).setText(answer);
+            flashcardDatabase.insertCard(new Flashcard(question,answer));
+            allFlashcards = flashcardDatabase.getAllCards();
 
             findViewById(R.id.flashcard_question).setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -142,6 +178,27 @@ public class MainActivity extends AppCompatActivity {
             findViewById(R.id.answer_1).setVisibility(View.INVISIBLE);
             findViewById(R.id.answer_2).setVisibility(View.INVISIBLE);
             findViewById(R.id.answer_3).setVisibility(View.INVISIBLE);
+
+            findViewById(R.id.next_arrow).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if(allFlashcards.size()==0)
+                        return;
+                    currentCardDisplayedIndex++;
+
+                    Log.i("click", "Next slide");
+                    //Implement snackbar
+
+                    Flashcard flashcard = allFlashcards.get(currentCardDisplayedIndex);
+                    ((TextView) findViewById(R.id.flashcard_question)).setText(flashcard.getQuestion());
+                    ((TextView) findViewById(R.id.flashcard_answer)).setText(flashcard.getAnswer());
+
+                }
+
+            });
+
+
 
         }
     }
