@@ -61,13 +61,13 @@
 ## Lab 3
 
 ### App Description
-`TODO://` Made sure added card is saved to the database, next arrow moves to next card from database
+ Made sure added card is saved to the database, next arrow moves to next card from database
 
 
 ### App Walk-though
 ![lab3update 2](https://user-images.githubusercontent.com/67253470/111948091-9a242480-8aac-11eb-9c0a-fbb8fd70dd28.gif)
 
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
+
 
 ## Required
 - [ x ] User can create a card and still see their created card when the app is relaunched.
