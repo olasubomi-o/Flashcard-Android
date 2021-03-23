@@ -65,7 +65,8 @@
 
 
 ### App Walk-though
-![lab3update 2](https://user-images.githubusercontent.com/67253470/111948091-9a242480-8aac-11eb-9c0a-fbb8fd70dd28.gif)
+![lab3update 4](https://user-images.githubusercontent.com/67253470/112217290-75d16080-8bf0-11eb-9235-392c49a1726f.gif)
+
 
 
 
