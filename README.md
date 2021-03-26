@@ -54,3 +54,28 @@
 - [ ] A notification is shown if the card was created successfully
 - [ ] User can also enter multiple choice answers when creating a card
 - [ ] App is further styled and customized!
+
+
+📝 `NOTE` Paste this template at the top of your existing `README.md` file from the last lab.
+
+## Lab 3
+
+### App Description
+ Made sure added card is saved to the database, next arrow moves to next card from database
+
+
+### App Walk-though
+![lab3update 4](https://user-images.githubusercontent.com/67253470/112217290-75d16080-8bf0-11eb-9235-392c49a1726f.gif)
+
+
+
+
+## Required
+- [ x ] User can create a card and still see their created card when the app is relaunched.
+- [ x ] User can create muliple cards and browse through all created cards
+
+## Optional
+- [ ] User can delete a card and no longer see it in their deck anymore
+- [ ] Flashcards are shown in random order instead of the order they were created in
+- [ ] User can edit a card and see the edit saved when they browse through their deck of cards
+- [ ] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
